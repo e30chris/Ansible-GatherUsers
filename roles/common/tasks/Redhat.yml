@@ -1,0 +1,15 @@
+---
+- name: audit and report on passwd file
+  fetch:
+    src=/etc/passwd
+    dest=/tmp/{{ ansible_hostname }}_auditfile.txt
+
+- name: audit and report on group file
+  fetch:
+    src=/etc/group
+    dest=/tmp/{{ ansible_hostname }}_auditfile.txt
+
+- name: audit and report on sudoers file
+  fetch:
+    src=/etc/sudoers
+    dest=/tmp/{{ ansible_hostname }}_auditfile.txt

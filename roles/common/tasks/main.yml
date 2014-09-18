@@ -7,12 +7,11 @@
 - include: Redhat.yml
   when: ansible_os_family=="RedHat"
 
-- include: Ubuntu.yml
-  when: ansible_os_family=="Ubuntu"
-
-- include: Debian.yml
-  when: ansible_os_family=="Debian"
-
 - include: AIX.yml
   when: ansible_os_family=="AIX"
 
+- include: Solaris.yml
+  when: ansible_os_family=="Solaris"
+
+- include: HPUX.yml
+  when: ansible_os_family=="HPUX"
