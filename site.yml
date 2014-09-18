@@ -1,0 +1,7 @@
+---
+# Ansible playbook to audit users on servers
+- name: Audit users on servers
+  hosts: all
+  user: root
+  roles: 
+  - common
