@@ -10,8 +10,10 @@
   fetch:
     src=/etc/group
     dest={{ auditfile_save_dir }}/{{ ansible_hostname }}/
+    flat=yes
 
 - name: audit sudoers file
   fetch:
     src=/etc/sudoers
     dest={{ auditfile_save_dir }}/{{ ansible_hostname }}/
+    flat=yes
