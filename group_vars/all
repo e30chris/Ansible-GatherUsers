@@ -1,0 +1,6 @@
+---
+# common variables for the gather facts playbook
+# format for this file
+# variable: fact
+#
+auditfile_save_dir: /tmp/

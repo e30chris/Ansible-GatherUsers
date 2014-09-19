@@ -3,15 +3,15 @@
 - name: audit passwd file
   fetch:
     src=/etc/passwd
-    dest=/tmp/{{ ansible_hostname }}/
+    dest={{ auditfile_save_dir }}/{{ ansible_hostname }}/
     flat=yes
 
 - name: audit group file
   fetch:
     src=/etc/group
-    dest=/tmp/{{ ansible_hostname }}/
+    dest={{ auditfile_save_dir }}/{{ ansible_hostname }}/
 
 - name: audit sudoers file
   fetch:
     src=/etc/sudoers
-    dest=/tmp/{{ ansible_hostname }}/
+    dest={{ auditfile_save_dir }}/{{ ansible_hostname }}/
