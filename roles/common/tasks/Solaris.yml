@@ -1,0 +1,31 @@
+---
+# Audit the users on Solaris systems
+- name: audit the passwd file
+  fetch:
+    src=/etc/passwd
+    dest=/tmp/{{ ansible_hostname }}/
+    flat=yes
+
+- name: audit the group file
+  fetch:
+    src=/etc/group
+    dest=/tmp/{{ ansible_hostname }}/
+    flat=yes
+
+- name: audit the sfw sudoers file
+  fetch:
+    src=/opt/sfw/etc/sudoers
+    dest=/tmp/{{ ansible_hostname }}/
+    flat=yes
+
+- name: audit the local sudoers file
+  fetch:
+    src=/usr/local/etc/sudoers
+    dest=/tmp/{{ ansible_hostname }}/
+    flat=yes
+
+- name: audit the attr file
+  fetch:
+    src=/etc/user_attr
+    dest=/tmp/{{ ansible_hostname }}/
+    flat=yes
