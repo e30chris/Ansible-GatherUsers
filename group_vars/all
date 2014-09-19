@@ -3,4 +3,4 @@
 # format for this file
 # variable: fact
 #
-auditfile_save_dir: /tmp/
+auditfile_save_dir: /tmp
