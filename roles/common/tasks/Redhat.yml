@@ -1,15 +1,17 @@
 ---
-- name: audit and report on passwd file
+# Audit the users on RedHat systems
+- name: audit passwd file
   fetch:
     src=/etc/passwd
-    dest=/tmp/{{ ansible_hostname }}_auditfile.txt
+    dest=/tmp/{{ ansible_hostname }}/
+    flat=yes
 
-- name: audit and report on group file
+- name: audit group file
   fetch:
     src=/etc/group
-    dest=/tmp/{{ ansible_hostname }}_auditfile.txt
+    dest=/tmp/{{ ansible_hostname }}/
 
-- name: audit and report on sudoers file
+- name: audit sudoers file
   fetch:
     src=/etc/sudoers
-    dest=/tmp/{{ ansible_hostname }}_auditfile.txt
+    dest=/tmp/{{ ansible_hostname }}/
