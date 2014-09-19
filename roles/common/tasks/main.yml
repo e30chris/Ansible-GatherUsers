@@ -1,9 +1,6 @@
 ---
 # Ansible playbook to audit and report on users on servers
 
-- name: Add the OS specific variables
-  include_vars: "{{ ansible_os_family }}.yml"
-
 - include: Redhat.yml
   when: ansible_os_family=="RedHat"
 
